@@ -148,7 +148,7 @@ aside {
     display: flex;
 }
 .exit {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     bottom: 1rem;
     left: 50%;
