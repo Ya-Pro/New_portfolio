@@ -54,6 +54,43 @@ html {
 .sharif {
     font-size: 1.4rem;
 }
+h4 {
+    background-color: var(--bgC);
+    overflow: hidden;
+    margin: 0 auto;
+}
+h4 .text {
+    font-size: 1.3rem;
+    position: relative;
+}
+h4 .first_text {
+    color: var(--black);
+}
+.text.second_text {
+    width: 100%;
+    color: var(--textC);
+}
+.text.second_text::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgC);
+    border-left: 2px solid var(--textC);
+    animation: animate_text 10s steps(30) infinite;
+}
+@keyframes animate_text {
+    40%,
+    60% {
+            left:100%  ;
+    }
+    100% {
+        left: 0;
+    }
+    
+}
 img {
     width: 100%;
     display: block;
@@ -247,6 +284,14 @@ h4 {
 /* the beginning of the about section */ 
 .about {
     padding-top: 3rem;
+}
+.exit {
+    position: absolute;
+    display: inline-block;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.5rem;
 }
 
 .about-content h3 , .services h3 , .portfolio h3 , .connected h3 {
